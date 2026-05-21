@@ -1,3 +1,4 @@
+#define DEBUG
 #include "./allocator.c"
 
 int main() {
@@ -5,6 +6,8 @@ int main() {
     int* ptr2 = mal(16);
     int* ptr3 = mal(32);
     int* ptr4 = mal(64);
+
+    printfreelist();
 
     mfr(ptr1);
     mfr(ptr2);
